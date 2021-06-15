@@ -3,7 +3,7 @@ Pre-requisitos
 
 ### __1. Git (opcional)__
 ```
-git clone https://github.com/juangonzaleze22/test-angular.git
+git clone https://github.com/juangonzaleze22/test-angular-mex.git
 ```
 - o descargar zip desde **https://github.com/juangonzaleze22/test-angular-mex.git**
 
@@ -35,9 +35,7 @@ ng serve
 http://localhost:4200
 ```
 
+**https://test-angular-mex.netlify.app**
 
-```console
-https://test-angular-mex.netlify.app
-```
 
 
