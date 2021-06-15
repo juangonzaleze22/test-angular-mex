@@ -1,0 +1,30 @@
+:host{
+    .employees{
+        padding: 70px 0;
+        @media (max-width: 576px){
+            padding: 70px 15px;
+        }
+        &__table{
+            width: 100%;
+
+        }
+        &__pagination{
+            margin: 35px auto;
+        }
+    }
+    
+    .form{
+        margin-bottom: 25px;
+        width: max-content;
+        &__form-group{
+            display: flex;
+            flex-direction: column;
+        }
+        &__p{
+            color: var(--color-danger);
+            font-size: 12px;
+            margin: 0;
+            transform: translateY(-10px);
+        }
+    }
+}

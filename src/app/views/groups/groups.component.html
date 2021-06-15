@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="groups">
+        <aside class="groups__aside">
+            <div class="d-flex">
+                <h2>Groups</h2>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Search Group</mat-label>
+                    <input matInput placeholder="Search" (change)="searchGroup($event)">
+                </mat-form-field>
+            </div>
+            <div
+                cdkDropList
+                #todoList="cdkDropList"
+                [cdkDropListData]="groups"
+                [cdkDropListConnectedTo]="[doneList]"
+                class="example-list"
+                (cdkDropListDropped)="drop($event)">
+                <div class="example-box" *ngFor="let item of groups" cdkDrag>
+                    {{item.name}}
+                </div>
+          </div>
+        </aside>
+        <section class="groups__body">
+            <div class="d-flex">
+                <h2>Select all</h2>
+                <mat-checkbox class="example-margin"
+                (change)="selectAll()"
+                [(ngModel)]="selectedAll">
+                </mat-checkbox>
+            </div>
+            <form action="" (ngSubmit)="sendData()">     
+            <div
+                cdkDropList
+                #doneList="cdkDropList"
+                [cdkDropListData]="groups_done"
+                [cdkDropListConnectedTo]="[todoList]"
+                class="example-list"
+                (cdkDropListDropped)="drop($event)">
+                <div class="example-box employees" *ngFor="let item of groups_done" cdkDrag>
+                        <span *ngFor="let empl of item.employees">
+                            <mat-checkbox class="example-margin"
+                            (change)="addToArray(empl, empl.id, $event)"
+                            [checked]="item.checked"
+                            [value]="empl.id"
+                            name="employees"
+                            >
+                            </mat-checkbox>
+                            {{empl.name}}
+                        </span>
+                    </div>
+                </div>
+                <button mat-raised-button type="submit" class="btn-continue">Continuar</button>
+            </form>
+        </section>
+    </div>
+</div>

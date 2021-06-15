@@ -1,0 +1,40 @@
+:host{
+    .toolbar{
+        background: var(--color-primary); /* fallback for old browsers */
+        color: var(--color-white);
+        width: 100%;
+        padding: 0;
+        .mat-toolbar-row{
+            padding: 0;
+            @media (max-width: 576px){
+                flex-direction: column;
+                height: auto;
+            }
+        }
+        &__buttons{
+            margin-left: auto;
+            @media (max-width: 576px){
+                padding: 0;
+                margin: 0;
+                padding: 5px 0;
+            }
+        }
+        &__a{
+            margin: auto 15px;
+            text-decoration: none;
+            color: var(--color-white);
+            font-weight: normal;
+            font-size: 14px;
+            text-transform: uppercase;
+            padding: 7.5px 15px;
+            transition: .3s all ease-in-out;
+            border-bottom: 1px solid transparent;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+        &__active{
+            border-bottom: 1px solid var(--color-white);
+        }
+    }
+}

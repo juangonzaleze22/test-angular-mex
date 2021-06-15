@@ -1,0 +1,11 @@
+:host{
+    .carouselEdit{
+        img{
+            object-fit: cover;
+            height: 50vw;
+            @media (min-width: 1024px ) {
+                height: calc(100vh - 64px);
+            }
+        }
+    }
+}
